@@ -1,0 +1,202 @@
+{
+  "project_title": "Horse Yard Manager",
+  "archetype": "ORGANIC & EARTHY / MODERN EQUESTRIAN",
+  "theme_strategy": {
+    "primary_mode": "light",
+    "theme_toggle": true,
+    "aesthetic_description": "A high-end, tactile, equestrian-inspired design system. Blends rich saddle leather tones, deep hunter greens, warm ivory background paper textures, ochre accent badges, and crisp micro-borders. Rejects generic purple SaaS gradients and cold flat design in favor of heritage craftsmanship meets Swiss structure."
+  },
+  "typography": {
+    "font_family_pairing": {
+      "display_heading": "'Playfair Display', 'Cormorant Garamond', serif",
+      "sans_heading": "'Cabinet Grotesk', 'Outfit', sans-serif",
+      "body": "'DM Sans', 'IBM Plex Sans', sans-serif",
+      "mono_numerical": "'JetBrains Mono', 'Source Code Pro', monospace"
+    },
+    "scale": {
+      "h1_hero": "text-3xl sm:text-4xl lg:text-5xl font-serif font-bold tracking-tight leading-tight",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-serif font-bold tracking-tight text-amber-950 dark:text-amber-100",
+      "h3_subsection": "text-xl sm:text-2xl font-serif font-semibold text-amber-900 dark:text-amber-200",
+      "h4_card": "text-base sm:text-lg font-sans font-bold tracking-wide uppercase text-amber-900 dark:text-amber-300",
+      "body_text": "text-sm sm:text-base font-sans leading-relaxed text-stone-700 dark:text-stone-300",
+      "subtext_caption": "text-xs sm:text-sm font-sans text-stone-500 dark:text-stone-400",
+      "badge_label": "text-xs font-mono font-semibold tracking-wider uppercase"
+    },
+    "rules": [
+      "Never use Inter for main headings or page titles. Use Playfair Display for editorial gravitas or Cabinet Grotesk for crisp section subtitles.",
+      "Numerical values, passport IDs, dates, and currency totals must use monospace font (JetBrains Mono).",
+      "All card overlines must be tiny uppercase with letter spacing: tracking-[0.2em]."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "saddle_brown": {
+        "50": "#fdf8f5",
+        "100": "#f9ede4",
+        "200": "#f3d8c4",
+        "500": "#c87d49",
+        "700": "#8c4921",
+        "900": "#4a2410",
+        "950": "#2a1106"
+      },
+      "hunter_green": {
+        "50": "#f2f7f4",
+        "100": "#dfede5",
+        "500": "#2d6a4f",
+        "800": "#1b4332",
+        "900": "#081c15",
+        "950": "#040e0b"
+      },
+      "warm_bone": {
+        "bg_light": "#FAF7F2",
+        "surface_light": "#F3EDE2",
+        "card_light": "#FFFFFF",
+        "border_light": "#E5DEC9"
+      },
+      "slate_dark": {
+        "bg_dark": "#121110",
+        "surface_dark": "#1C1A17",
+        "card_dark": "#25221E",
+        "border_dark": "#3A352F"
+      },
+      "accents": {
+        "ochre_gold": "#D4A373",
+        "brass_accent": "#B07D34",
+        "rust_alert": "#BC4749",
+        "sage_success": "#52B788",
+        "equestrian_blue": "#2B4C6F"
+      }
+    },
+    "semantic_mapping": {
+      "page_background": "bg-[#FAF7F2] dark:bg-[#121110]",
+      "surface_card": "bg-white dark:bg-[#25221E] border border-[#E5DEC9] dark:border-[#3A352F] shadow-sm",
+      "primary_cta": "bg-[#4a2410] hover:bg-[#2a1106] text-[#FAF7F2] dark:bg-[#D4A373] dark:hover:bg-[#B07D34] dark:text-[#121110] transition-colors duration-200",
+      "secondary_cta": "bg-[#2d6a4f] hover:bg-[#1b4332] text-white transition-colors duration-200",
+      "alert_badge": "bg-[#BC4749]/10 text-[#BC4749] border border-[#BC4749]/30",
+      "due_soon_badge": "bg-[#D4A373]/15 text-[#8c4921] dark:text-[#D4A373] border border-[#D4A373]/30",
+      "success_badge": "bg-[#52B788]/15 text-[#1b4332] dark:text-[#52B788] border border-[#52B788]/30"
+    },
+    "forbidden_colors": [
+      "#7351B7 (AI Purple Gradient)",
+      "#1B93A4 (Teal Green)",
+      "Flat pure black (#000000) without tint"
+    ]
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous spacing philosophy with tactile borders, rounded-lg corners, micro-shadows, and organic breathing room.",
+    "container_padding": "px-4 sm:px-6 lg:px-12 py-6 sm:py-8 lg:py-12",
+    "card_padding": "p-5 sm:p-6 lg:p-8",
+    "grid_modes": {
+      "dashboard_bento": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 lg:gap-6",
+      "horses_grid": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
+      "form_split": "grid grid-cols-1 lg:grid-cols-12 gap-8"
+    }
+  },
+  "responsive": {
+    "breakpoint": "mobile-first",
+    "layout": "Multi-column grids condense to single column on mobile (< 768px). Navigation drawer converts to a slide-over mobile drawer with rich tactile header. Dashboard stat cards stack in 2x2 or 1-column layouts.",
+    "typography": "Mobile heading sizes scale gracefully using clamp or responsive utility classes (e.g. text-3xl sm:text-4xl lg:text-5xl). Touch targets minimum 44px height.",
+    "overflow_guard": "All scrollable tables wrap in overflow-x-auto containers with rounded-lg borders.",
+    "tap_targets": "All buttons, tab items, dropdown triggers, and interactive list items have minimum h-11 / p-3 hit targets."
+  },
+  "image_urls": {
+    "hero_stable": "https://images.pexels.com/photos/37540627/pexels-photo-37540627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "horse_profile_arabian": "https://images.pexels.com/photos/20145372/pexels-photo-20145372.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "horse_field_grazing": "https://images.unsplash.com/photo-1746566841253-44181b0a042c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHw0fHxlcXVlc3RyaWFuJTIwaG9yc2UlMjByaWRpbmclMjB0aG9yb3VnaGJyZWQlMjBzdGFibGV8ZW58MHx8fHwxNzg5NzAzNDY1fDA&ixlib=rb-4.1.0&q=85",
+    "competition_jumping_1": "https://images.unsplash.com/photo-1546700990-7b6416f2d90c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHxlcXVlc3RyaWFuJTIwc2hvdyUyMGp1bXBpbmclMjBob3JzZSUyMGNvbXBldGl0aW9uJTIwcmlkZXJ8ZW58MHx8fHwxNzg5NzAzNDY1fDA&ixlib=rb-4.1.0&q=85",
+    "competition_jumping_2": "https://images.pexels.com/photos/37936169/pexels-photo-37936169.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "key_views_blueprints": [
+    {
+      "view_name": "Landing & Auth Screens",
+      "route": "/ and /login /register",
+      "structure": "Split-screen visual hero with dark saddle brown overlay, showcasing stable management value prop, monthly tier calculator (by horse count), interactive demo button, and auth forms (login, register, forgot password).",
+      "key_elements": [
+        "Yard size pricing calculator slider (e.g. 5 to 50 horses @ $4/horse/mo)",
+        "Equestrian badge header & feature highlights",
+        "Quick role switcher (Yard Manager vs Horse Owner Portal)"
+      ]
+    },
+    {
+      "view_name": "Main Manager Dashboard",
+      "route": "/dashboard",
+      "structure": "Bento grid layout with horse count summary, upcoming care tasks (vaccinations, farrier, dental, physio due within 30 days), monthly owner billing overview, and quick-add actions.",
+      "key_elements": [
+        "Horse Count & Capacity metric widget with status indicators (Full Board, Part Board, Leased)",
+        "Upcoming Health Reminders feed with category tags (Vaccination, Farrier, Dental, Physio)",
+        "Monthly Revenue & Outstanding Billing summary with Stripe sync status",
+        "Quick Action trigger modal (Log Health Event, Add Expense, Record Feed Plan)"
+      ]
+    },
+    {
+      "view_name": "Horses Directory & Profile Detail",
+      "route": "/horses and /horses/:id",
+      "structure": "Directory grid with filterable cards by stable wing, lease status, and owner. Detail view features tabbed panels: Passport & Microchip Info, Owner/Lease details, Feed & Supplement Plan, Health History, and Billing history.",
+      "key_elements": [
+        "Passport ID & UELN number copy button",
+        "Visual Feed Plan widget with morning/midday/evening breakdown & monthly feed cost calculator",
+        "Lease agreement status & emergency contacts card"
+      ]
+    },
+    {
+      "view_name": "Care Schedule & Reminders Log",
+      "route": "/schedule",
+      "structure": "Unified health schedule with calendar grid + timeline views. Filterable by practitioner type (Farrier, Vet/Vaccination, Dentist, Physio).",
+      "key_elements": [
+        "Practitioner contact directory quick-call/email actions",
+        "Recurring reminder rule builder (e.g., Farrier every 6 weeks, Dental every 12 months)",
+        "Completion log with photo/invoice attachment simulation"
+      ]
+    },
+    {
+      "view_name": "Feed Plan & Expense Ledger",
+      "route": "/expenses",
+      "structure": "Financial ledger & feed budgeting module. Bar graphs of expense categories (Hay, Bedding, Feed, Vet, Utilities) + horse feed cost per day.",
+      "key_elements": [
+        "Feed inventory stock level indicator",
+        "Expense entry form with horse assignment & billable to owner toggle",
+        "Filterable ledger table with search and date range picker"
+      ]
+    },
+    {
+      "view_name": "Competition Entries Tracker",
+      "route": "/competitions",
+      "structure": "Show calendar with entry deadlines, horse/rider pairings, entry fee tracking, transport logs, and ribbon/score records.",
+      "key_elements": [
+        "Upcoming show countdown card",
+        "Class entry roster per horse",
+        "Results & placing history feed"
+      ]
+    },
+    {
+      "view_name": "Owner Billing & Stripe Subscription",
+      "route": "/billing",
+      "structure": "Yard Manager monthly invoicing center and yard subscription plan manager. Generates itemized monthly statements for horse owners.",
+      "key_elements": [
+        "Yard subscription tier manager (Stripe integration simulator with horse-count slider)",
+        "Owner statement generator (Livery fee + extras + feed share + vet pass-through)",
+        "Download PDF / Send Email invoice action triggers"
+      ]
+    },
+    {
+      "view_name": "Owner Portal",
+      "route": "/owner-portal",
+      "structure": "Simplified, elegant view for horse owners to track their horse's wellbeing, feed plans, care history, and monthly statements.",
+      "key_elements": [
+        "My Horses status cards with recent health activity",
+        "Current & past monthly statements with payment status",
+        "Direct message / notes to Yard Manager"
+      ]
+    }
+  ],
+  "testing_requirements": {
+    "data_testid_rules": "All interactive buttons, inputs, tabs, modal triggers, tables, and stat counters MUST include concise data-testid attributes (e.g., data-testid='add-horse-btn', data-testid='vaccination-due-filter', data-testid='owner-statement-download')."
+  },
+  "instructions_to_main_agent": [
+    "Follow the exact file paths and structure of the React app (.js files).",
+    "Use lucide-react or @heroicons/react for icons. Do NOT use emojis as icons.",
+    "Implement mock data state in a clean, reactive state manager or React state so all user interactions (adding a horse, logging a farrier visit, toggling paid status, calculating pricing) reflect immediately in UI.",
+    "Ensure all responsive mobile breakpoints have touch-friendly spacing and collapsable navigation drawers.",
+    "Save the finished guidelines as requested and ensure dark/light mode toggle works gracefully throughout all components."
+  ]
+}
