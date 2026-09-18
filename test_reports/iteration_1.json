@@ -1,0 +1,46 @@
+{
+  "summary": "First-finish smoke test of Horse Yard Manager. Backend: 14/14 critical endpoints working after using correct schemas (Vaccination capitalized, expenses need category, checkout needs horse_count, reset-password uses 'password' field). Frontend: landing, login (admin creds), dashboard stats, horses page, add-horse modal all functional. RBAC enforced (owner blocked from creating/deleting horses with 403). Stripe checkout returns valid checkout_url + session_id with amount=$4 for 1 horse.",
+  "tested_scope": ["backend", "frontend", "auth", "integration"],
+  "passed": [
+    "POST /api/auth/login (admin) -> 200, user JSON",
+    "GET /api/auth/me -> 200 with httpOnly cookie",
+    "POST /api/auth/register (owner role) -> 200",
+    "POST /api/auth/forgot-password (registered + unregistered) -> generic 200 message",
+    "POST /api/auth/reset-password invalid token -> 400 'Invalid or expired token'",
+    "POST /api/horses -> 200, GET /api/horses list works",
+    "POST /api/care-events (Vaccination) -> 200 with next_due",
+    "POST /api/expenses (with category) -> 200",
+    "POST /api/feed-plans -> 200",
+    "POST /api/competitions -> 200",
+    "GET /api/owner-statements -> 200 aggregates by owner/month",
+    "GET /api/dashboard/summary -> horse_count=1, yard_monthly_fee=$4, overdue_care populated",
+    "POST /api/payments/checkout -> 200 with Stripe checkout_url and session_id (amount=$4)",
+    "GET /api/payments/status/{id} -> 200 status=initiated, payment_status=pending, amount=4",
+    "RBAC: owner POST /api/horses -> 403 'Managers only'",
+    "RBAC: owner DELETE /api/horses/{id} -> 403 'Managers only'",
+    "Frontend landing page renders (Sign in, Get started, yard size calculator)",
+    "Login flow (admin) redirects to /dashboard with welcome toast",
+    "Dashboard shows Horses on yard=1, Yard fee=$4.00, Overdue Vaccination card",
+    "Horses page + Add horse modal open with all form fields (name, breed, color, stable wing, passport, UELN, owner, lease status, monthly livery)"
+  ],
+  "failed": [
+    {
+      "area": "Schema documentation drift (minor)",
+      "issue": "Care event category expects capitalized 'Vaccination|Farrier|Dental|Physio' (not lowercase); expenses require 'category' field; checkout requires 'horse_count' in body; reset-password body uses 'password' not 'new_password'. Not a bug, but review request payload examples in the problem statement don't match backend schemas.",
+      "evidence": "422 validation errors on lowercase category, missing category, missing horse_count, missing password",
+      "priority": "LOW"
+    },
+    {
+      "area": "Horse create payload",
+      "issue": "POST /api/horses ignores unknown fields 'age' and 'livery_type' silently; expected field is 'monthly_livery' (not 'monthly_livery_fee'). Non-blocking but frontend must use correct field names.",
+      "evidence": "Sent monthly_livery_fee=600, response returned monthly_livery=0.0",
+      "priority": "LOW"
+    }
+  ],
+  "action_items": [
+    "No blockers. Optionally document exact request schemas (capitalized care categories, expense category required, checkout horse_count required, horse field 'monthly_livery') for future consumers."
+  ],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
