@@ -73,7 +73,7 @@ export default function Billing() {
                 </div>
                 <div className="text-right">
                   <div className="overline">Total</div>
-                  <div className="font-mono-nums text-3xl text-[#1b4332]">${s.total.toFixed(2)}</div>
+                  <div className="font-mono-nums text-3xl text-[#1b4332]">R{s.total.toFixed(2)}</div>
                 </div>
               </div>
               <div className="border-t border-[#E5DEC9] pt-3">
