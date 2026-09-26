@@ -35,12 +35,12 @@ export default function Billing() {
             <div>
               <div className="overline">Yard subscription</div>
               <h2 className="font-serif-display text-3xl text-[#2a1106] mt-2">Simple, per-horse pricing</h2>
-              <p className="text-stone-700 mt-3">One flat rate — <span className="font-mono-nums text-[#8c4921]">$4</span> per horse per month. Cancel any time.</p>
+              <p className="text-stone-700 mt-3">One flat rate — <span className="font-mono-nums text-[#8c4921]">R 4</span> per horse per month. Cancel any time.</p>
               <div className="mt-6">
                 <label className="overline">Horses to bill for</label>
                 <div className="flex items-center gap-4 mt-2">
                   <input data-testid="sub-count" type="number" min="1" max="500" className="input font-mono-nums w-32" value={horseCount} onChange={e=>setHorseCount(Math.max(1, parseInt(e.target.value)||1))}/>
-                  <span className="font-mono-nums text-3xl text-[#4a2410]" data-testid="sub-total">${(horseCount*4).toFixed(2)}<span className="text-sm text-stone-500">/mo</span></span>
+                  <span className="font-mono-nums text-3xl text-[#4a2410]" data-testid="sub-total">R{(horseCount*75).toFixed(2)}<span className="text-sm text-stone-500">/mo</span></span>
                 </div>
               </div>
               <button data-testid="sub-checkout" onClick={checkout} disabled={loading} className="btn-primary mt-6 inline-flex items-center gap-2"><CreditCard size={16}/>{loading ? "Redirecting…" : "Pay monthly with Stripe"}</button>
