@@ -528,7 +528,7 @@ async def create_checkout(req: CheckoutReq, request: Request, user: dict = Depen
     origin = req.origin_url.rstrip("/")
     body = CheckoutSessionRequest(
         amount=float(amount),
-        currency="usd",
+        currency="zar",
         success_url=f"{origin}/payment/success?session_id={{CHECKOUT_SESSION_ID}}",
         cancel_url=f"{origin}/payment/cancel",
         metadata={"user_id": user["id"], "horse_count": str(req.horse_count), "plan": "yard_monthly"},
