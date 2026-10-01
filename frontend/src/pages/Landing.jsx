@@ -30,7 +30,7 @@ export default function Landing() {
             The quiet ledger for<br />a well-run yard.
           </h1>
           <p className="mt-6 text-stone-700 max-w-lg text-lg leading-relaxed">
-            One book for vaccinations, farrier, dental, physio, feed, expenses, competitions, passports, leases and owner billing. Priced simply — <span className="font-mono-nums text-[#8c4921]">$4/horse/month</span>.
+            One book for vaccinations, farrier, dental, physio, feed, expenses, competitions, passports, leases and owner billing. Priced simply — <span className="font-mono-nums text-[#8c4921]">R4/horse/month</span>.
           </p>
           <div className="mt-8 paper-card p-6 max-w-md">
             <div className="overline mb-3">Yard size calculator</div>
@@ -46,7 +46,7 @@ export default function Landing() {
             />
             <div className="mt-4 flex items-baseline justify-between">
               <span className="text-stone-500 text-sm">Estimated monthly</span>
-              <span className="font-mono-nums text-2xl text-[#1b4332]" data-testid="calc-monthly">${monthly}</span>
+              <span className="font-mono-nums text-2xl text-[#1b4332]" data-testid="calc-monthly">R {monthly}</span>
             </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
