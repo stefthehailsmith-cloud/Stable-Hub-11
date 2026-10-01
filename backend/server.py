@@ -36,7 +36,7 @@ EMAIL_BASE_URL = (os.environ.get("INTEGRATION_PROXY_URL") or "").strip().rstrip(
 EMAIL_KEY = os.environ.get("EMERGENT_EMAIL_KEY", "")
 EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME") or "Horse Yard Manager"
 
-PRICE_PER_HORSE_MONTHLY = 4.00  # USD per horse per month
+PRICE_PER_HORSE_MONTHLY = 75.00  # zar per horse per month
 
 # ---------------- Password / JWT ----------------
 def hash_password(pw: str) -> str:
@@ -538,7 +538,7 @@ async def create_checkout(req: CheckoutReq, request: Request, user: dict = Depen
         "session_id": session.session_id,
         "user_id": user["id"],
         "amount": amount,
-        "currency": "usd",
+        "currency": "zar",
         "horse_count": req.horse_count,
         "status": "initiated",
         "payment_status": "pending",
