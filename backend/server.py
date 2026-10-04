@@ -36,7 +36,8 @@ EMAIL_BASE_URL = (os.environ.get("INTEGRATION_PROXY_URL") or "").strip().rstrip(
 EMAIL_KEY = os.environ.get("EMERGENT_EMAIL_KEY", "")
 EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME") or "Horse Yard Manager"
 
-PRICE_PER_HORSE_MONTHLY = 4.00  # USD per horse per month
+PRICE_PER_HORSE_MONTHLY = 75.00  # ZAR per horse per month
+
 
 # ---------------- Password / JWT ----------------
 def hash_password(pw: str) -> str:
@@ -170,7 +171,7 @@ async def register(req: RegisterReq, response: Response):
     email = req.email.lower()
     if await db.users.find_one({"email": email}):
         raise HTTPException(400, "Email already registered")
-    doc = {
+    doc = {m
         "email": email,
         "password_hash": hash_password(req.password),
         "name": req.name,
