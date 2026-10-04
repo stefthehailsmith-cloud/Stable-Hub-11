@@ -81,7 +81,8 @@ export default function Dashboard() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
             <div className="overline">Yard subscription</div>
-            <h3 className="font-serif-display text-2xl text-[#2a1106] mt-1">{d.horse_count} × $4/horse = <span className="font-mono-nums">${d.yard_monthly_fee.toFixed(2)}</span>/mo</h3>
+            <h3 className="font-serif-display text-2xl text-[#2a1106] mt-1">{d.horse_count} × 75
+            /horse = <span className="font-mono-nums">${d.yard_monthly_fee.toFixed(2)}</span>/mo</h3>
             <p className="text-sm text-stone-500 mt-1">{d.subscription.active ? "Latest payment: Active" : "No active subscription yet."}</p>
           </div>
           <Link to="/billing" data-testid="dash-manage-sub" className="btn-secondary">Manage subscription</Link>
