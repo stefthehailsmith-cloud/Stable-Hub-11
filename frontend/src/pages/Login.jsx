@@ -28,7 +28,7 @@ export default function Login() {
         <img src="https://images.unsplash.com/photo-1746566841253-44181b0a042c?crop=entropy&cs=srgb&fm=jpg&h=1000&w=800" alt="Horse" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-tr from-[#2a1106]/70 via-[#4a2410]/30 to-transparent" />
         <div className="absolute bottom-10 left-10 right-10 text-[#FAF7F2]">
-          <div className="overline text-[#D4A373]">Horse Yard Manager</div>
+          <div className="overline text-[#D4A373]">Stable Hub Manager</div>
           <h2 className="font-serif-display text-4xl mt-2 leading-tight">Every hoof, every hay bale, every invoice — accounted for.</h2>
         </div>
       </div>
@@ -36,7 +36,7 @@ export default function Login() {
         <form onSubmit={submit} className="w-full max-w-sm">
           <Link to="/" className="inline-flex items-center gap-2 mb-8">
             <div className="w-10 h-10 rounded-lg bg-[#4a2410] text-[#D4A373] flex items-center justify-center font-serif-display text-xl">H</div>
-            <span className="font-serif-display text-lg">Horse Yard</span>
+            <span className="font-serif-display text-lg">Stable Hub</span>
           </Link>
           <h1 className="font-serif-display text-3xl text-[#2a1106]">Welcome back</h1>
           <p className="text-stone-500 mt-2 mb-8">Sign in to manage your yard.</p>

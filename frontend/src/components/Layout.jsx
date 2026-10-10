@@ -31,7 +31,7 @@ export default function Layout() {
           <Link to="/dashboard" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-[#4a2410] flex items-center justify-center text-[#D4A373] font-serif-display text-xl">H</div>
             <div>
-              <div className="font-serif-display text-lg leading-tight text-[#2a1106]">Horse Yard</div>
+              <div className="font-serif-display text-lg leading-tight text-[#2a1106]">Stable Hub</div>
               <div className="overline text-[10px]">Manager</div>
             </div>
           </Link>
@@ -58,7 +58,7 @@ export default function Layout() {
       <div className="flex-1 min-w-0">
         <header className="lg:hidden sticky top-0 z-30 bg-white border-b border-[#E5DEC9] flex items-center justify-between p-4">
           <button onClick={() => setOpen(!open)} className="p-2"><Menu size={20} /></button>
-          <div className="font-serif-display text-lg">Horse Yard</div>
+          <div className="font-serif-display text-lg">Stable Hub</div>
           <div className="w-8" />
         </header>
         <main className="fade-in">

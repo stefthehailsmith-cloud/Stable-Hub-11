@@ -1,7 +1,7 @@
-# Horse Yard Manager — PRD
+# Stable Hub Manager — PRD
 
 ## Original Problem Statement
-Horse Yard Manager — One app for vaccinations, farrier, dental, physio, feed, expenses, competition entries, passports, leases and owner billing. Yards pay monthly according to number of horses.
+Stable Hub Manager — One app for vaccinations, farrier, dental, physio, feed, expenses, competition entries, passports, leases and owner billing. Yards pay monthly according to number of horses.
 
 ## User Choices
 - Auth: JWT-based custom auth (email + password) with password reset via Emergent-managed email

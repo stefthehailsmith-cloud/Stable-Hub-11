@@ -1,5 +1,5 @@
 {
-  "summary": "First-finish smoke test of Horse Yard Manager. Backend: 14/14 critical endpoints working after using correct schemas (Vaccination capitalized, expenses need category, checkout needs horse_count, reset-password uses 'password' field). Frontend: landing, login (admin creds), dashboard stats, horses page, add-horse modal all functional. RBAC enforced (owner blocked from creating/deleting horses with 403). Stripe checkout returns valid checkout_url + session_id with amount=$4 for 1 horse.",
+  "summary": "First-finish smoke test of Stable Hub Manager. Backend: 14/14 critical endpoints working after using correct schemas (Vaccination capitalized, expenses need category, checkout needs horse_count, reset-password uses 'password' field). Frontend: landing, login (admin creds), dashboard stats, horses page, add-horse modal all functional. RBAC enforced (owner blocked from creating/deleting horses with 403). Stripe checkout returns valid checkout_url + session_id with amount=$4 for 1 horse.",
   "tested_scope": ["backend", "frontend", "auth", "integration"],
   "passed": [
     "POST /api/auth/login (admin) -> 200, user JSON",

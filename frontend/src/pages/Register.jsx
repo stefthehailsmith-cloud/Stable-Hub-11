@@ -28,7 +28,7 @@ export default function Register() {
         <form onSubmit={submit} className="w-full max-w-sm">
           <Link to="/" className="inline-flex items-center gap-2 mb-8">
             <div className="w-10 h-10 rounded-lg bg-[#4a2410] text-[#D4A373] flex items-center justify-center font-serif-display text-xl">H</div>
-            <span className="font-serif-display text-lg">Horse Yard</span>
+            <span className="font-serif-display text-lg">Stable Hub</span>
           </Link>
           <h1 className="font-serif-display text-3xl text-[#2a1106]">Open your yard book</h1>
           <p className="text-stone-500 mt-2 mb-8">Start free — pay only when you have horses to bill.</p>

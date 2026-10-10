@@ -34,7 +34,7 @@ JWT_ALGORITHM = "HS256"
 FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:3000")
 EMAIL_BASE_URL = (os.environ.get("INTEGRATION_PROXY_URL") or "").strip().rstrip("/") or "https://integrations.emergentagent.com"
 EMAIL_KEY = os.environ.get("EMERGENT_EMAIL_KEY", "")
-EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME") or "Horse Yard Manager"
+EMAIL_FROM_NAME = os.environ.get("EMAIL_FROM_NAME") or "Stable Hub Manager"
 
 PRICE_PER_HORSE_MONTHLY = 75.00  # zar per horse per month
 
@@ -625,4 +625,4 @@ async def shutdown():
 
 @api.get("/")
 async def root():
-    return {"message": "Horse Yard Manager API", "version": "1.0"}
+    return {"message": "Stable Hub Manager API", "version": "1.0"}

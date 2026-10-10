@@ -13,7 +13,7 @@ export default function Landing() {
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-[#4a2410] text-[#D4A373] flex items-center justify-center font-serif-display text-xl">H</div>
           <div>
-            <div className="font-serif-display text-lg leading-tight">Horse Yard</div>
+            <div className="font-serif-display text-lg leading-tight">Stable Hub</div>
             <div className="overline text-[10px]">Manager</div>
           </div>
         </div>

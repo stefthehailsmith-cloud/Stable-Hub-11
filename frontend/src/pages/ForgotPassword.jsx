@@ -21,7 +21,7 @@ export default function ForgotPassword() {
       <div className="paper-card p-8 w-full max-w-md">
         <Link to="/" className="inline-flex items-center gap-2 mb-6">
           <div className="w-10 h-10 rounded-lg bg-[#4a2410] text-[#D4A373] flex items-center justify-center font-serif-display text-xl">H</div>
-          <span className="font-serif-display text-lg">Horse Yard</span>
+          <span className="font-serif-display text-lg">Stable Hub</span>
         </Link>
         <h1 className="font-serif-display text-3xl text-[#2a1106]">Forgot password</h1>
         {sent ? (
