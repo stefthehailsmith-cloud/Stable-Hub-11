@@ -79,8 +79,10 @@ export default function Billing() {
               <div className="border-t border-[#E5DEC9] pt-3">
                 <ul className="text-sm divide-y divide-[#E5DEC9]">
                   {s.items.map((li,j)=>(
-                    <li key={j} className="py-2 flex justify-between"><span className="text-stone-700">{li.desc}</span><span className="font-mono-nums text-[#2a1106]"R
-                                                                                                                      R </span>{li.amount.toFixed(2)}</span></li>
+                    <li key={j} className="py-2 flex justify-between">
+                      <span className="text-stone-700">{li.desc}</span>
+                      <span className="font-mono-nums text-[#2a1106]">R{li.amount.toFixed(2)}</span>
+                    </li>
                   ))}
                 </ul>
               </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { api, errMsg } from "@/lib/api";
 import { toast } from "sonner";
@@ -19,15 +19,15 @@ export default function HorseDetail() {
   const [feed, setFeed] = useState(null);
   const [tab, setTab] = useState("passport");
 
-  const load = async () => {
+  const load = useCallback(async () => {
     const [h, e, f] = await Promise.all([
       api.get(`/horses/${id}`),
       api.get(`/care-events?horse_id=${id}`),
       api.get(`/feed-plans?horse_id=${id}`),
     ]);
     setHorse(h.data); setEvents(e.data); setFeed(f.data[0] || null);
-  };
-  useEffect(() => { load(); }, [id]);
+  }, [id]);
+  useEffect(() => { load(); }, [load]);
 
   const [feedForm, setFeedForm] = useState({ morning: "", midday: "", evening: "", supplements: "", daily_cost: 0 });
   useEffect(() => { if (feed) setFeedForm(feed); }, [feed]);
