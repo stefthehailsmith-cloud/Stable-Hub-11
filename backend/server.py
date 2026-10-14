@@ -509,10 +509,10 @@ async def dashboard(user: dict = Depends(get_current_user)):
     }
 
 # ==================== STRIPE PAYMENTS (Flow B) ====================
-from emergentintegrations.payments.stripe.checkout import (
-    StripeCheckout, CheckoutSessionRequest,
-)
+#from emergentintegrations.payments.stripe.checkout import (
+    #StripeCheckout, CheckoutSessionRequest,
 
+#
 STRIPE_API_KEY = os.environ.get("STRIPE_API_KEY", "sk_test_emergent")
 
 class CheckoutReq(BaseModel):
