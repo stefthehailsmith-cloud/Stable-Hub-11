@@ -583,8 +583,7 @@ async def stripe_webhook(request: Request):
         )
     return {"ok": True}
 
-# ---------------- Mount ----------------
-app.include_router(api)
+# ---------------- p
 
 app.add_middleware(
     CORSMiddleware,
@@ -593,7 +592,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+app.include_router(api)
 # ---------------- Startup ----------------
 @app.on_event("startup")
 async def startup():
