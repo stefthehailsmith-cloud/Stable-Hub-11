@@ -85,3 +85,8 @@ android-sdk/
 **/.emergent/recordings/
 stable-hub.zip
 stanle-hub.zip
+
+.env
+**/ .env
+
+/backend/.env
