@@ -6,7 +6,7 @@ const HERO = "https://images.pexels.com/photos/37540627/pexels-photo-37540627.jp
 
 export default function Landing() {
   const [horses, setHorses] = useState(15);
-  const monthly = (horses * 4).toFixed(2);
+  const monthly = (horses * 75).toFixed(2);
   return (
     <div className="min-h-screen">
       <nav className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
