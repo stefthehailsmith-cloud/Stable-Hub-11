@@ -39,7 +39,7 @@ function AppRoutes() {
       <Route path="/payment/success" element={<PaymentSuccess />} />
       <Route path="/payment/cancel" element={<PaymentCancel />} />
 
-      <Route element={<Protected><Layout /></Protected>}>
+      <Route path="/settings" element={<Settings />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/horses" element={<Horses />} />
         <Route path="/horses/:id" element={<HorseDetail />} />
@@ -48,7 +48,7 @@ function AppRoutes() {
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/billing" element={<Billing />} />
         <Route path="/owner-portal" element={<OwnerPortal />} />
-      </Route>
+      <Route path="/settings" element={<Settings />} />
       <Route path="*" element={<Navigate to="/dashboard" replace />} />
     </Routes>
   );
